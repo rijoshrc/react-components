@@ -1,11 +1,9 @@
-import { useState } from "react";
+import ElementWrapper from "./components/compound/ElementWrapper";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-red-200">Hello</h1>
+      <ElementWrapper />
     </>
   );
 }
