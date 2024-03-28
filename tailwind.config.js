@@ -4,6 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#27283E",
+        "primary-dark": "#fff",
+        secondary: "#707172",
+        "secondary-dark": "#707172",
         // button
         "primary-btn": "#fff",
         "primary-btn-dark": "#fff",
@@ -17,10 +21,14 @@ export default {
         "ghost-btn-dark": "#fff",
         "link-btn": "#000",
         "link-btn-dark": "#fff",
+        // end of button
       },
       backgroundColor: {
-        primary: "#f4e5d1",
-        secondary: "#fff",
+        primary: "#fff",
+        "primary-dark": "#000",
+        secondary: "#f0f0f0",
+        "secondary-dark": "#515151",
+        // button
         "primary-btn": "#80D17A",
         "primary-btn-dark": "#80D17A",
         "destructive-btn": "red",
@@ -29,10 +37,13 @@ export default {
         "secondary-btn-dark": "#f4e5d1",
         "ghost-btn": "rgb(246, 246, 249)",
         "ghost-btn-dark": "rgb(57, 56, 56)",
+        // end of button
       },
       borderColor: {
+        // button
         "outline-btn": "#000",
         "outline-btn-dark": "#fff",
+        // end of button
       },
     },
   },
