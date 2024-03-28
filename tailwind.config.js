@@ -10,6 +10,8 @@ export default {
         "secondary-btn": "#000",
       },
       backgroundColor: {
+        primary: "#f4e5d1",
+        secondary: "#fff",
         "primary-btn": "#000",
         "destructive-btn": "red",
         "secondary-btn": "#f4e5d1",
