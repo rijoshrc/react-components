@@ -4,7 +4,7 @@ import { ThemeProvider } from "./components/providers/ThemeProvider";
 function App() {
   return (
     <>
-      <ThemeProvider>
+      <ThemeProvider defaultTheme="light">
         <ElementWrapper />
       </ThemeProvider>
     </>

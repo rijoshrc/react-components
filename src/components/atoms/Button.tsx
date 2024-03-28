@@ -30,26 +30,28 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-primary-btn text-primary-btn hover:bg-primary-btn/50 dark:bg-red-600",
+        primary:
+          "bg-primary-btn text-primary-btn hover:bg-primary-btn/50 dark:bg-primary-btn-dark dark:hover:dark:bg-primary-btn-dark/50",
         destructive:
           "bg-destructive-btn text-destructive-btn hover:bg-destructive-btn/50",
-        outline: "border border-outline-btn hover:border-outline-btn/50",
+        outline:
+          "border border-outline-btn hover:border-outline-btn/50 text-outline-btn dark:text-outline-btn-dark dark:border-outline-btn-dark hover:dark:text-outline-btn-dark/50 hover:dark:border-outline-btn-dark/50",
         secondary:
           "bg-secondary-btn text-secondary-btn hover:bg-secondary-btn/50",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        ghost:
+          "hover:text-ghost-btn dark:text-ghost-btn-dark hover:bg-ghost-btn hover:dark:bg-ghost-btn-dark",
+        link: "text-link-btn underline-offset-4 hover:underline dark:text-link-btn-dark",
       },
       size: {
-        default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
+        md: "h-10 px-4 py-2",
         lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        icon: "h-10 px-3 flex gap-1",
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: "primary",
+      size: "md",
     },
   }
 );
