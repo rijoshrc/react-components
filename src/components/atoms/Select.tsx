@@ -1,7 +1,9 @@
 import React from "react";
+import { FaChevronDown } from "react-icons/fa";
 import ReactSelect, {
   ActionMeta,
   ControlProps,
+  DropdownIndicatorProps,
   MultiValue,
   OptionProps,
   PlaceholderProps,
@@ -11,7 +13,7 @@ import ReactSelect, {
   components,
 } from "react-select";
 
-export interface Props<T> {
+export type SelectProps<T> = {
   options?: T[] | [];
   label?: string;
   onChange?: (
@@ -25,14 +27,18 @@ export interface Props<T> {
   height?: number;
   isMulti?: boolean;
   error?: boolean;
-}
+};
 
-export interface Option {
+export type Option = {
   label: string;
   value: string | number;
-}
+};
 
+/**
+ * Select custom style
+ */
 const selectStyle: StylesConfig<Option> = {
+  // wrapper style
   control: (base: any) => ({
     ...base,
     border: "none",
@@ -40,6 +46,7 @@ const selectStyle: StylesConfig<Option> = {
     minWidth: "138px",
     width: "100%",
   }),
+  // selected value style
   singleValue: (base: any) => ({
     ...base,
     color: "#27283E",
@@ -47,6 +54,7 @@ const selectStyle: StylesConfig<Option> = {
     fontWeight: 400,
     lineHeight: "19.5px",
   }),
+  // input style
   input: (base: any) => ({
     ...base,
     maxWidth: "138px",
@@ -56,12 +64,14 @@ const selectStyle: StylesConfig<Option> = {
       lineHeight: "19.5px",
     },
   }),
+  // placeholder style
   placeholder(base) {
     return {
       ...base,
       lineHeight: "19.5px",
     };
   },
+  // option style
   option(base) {
     return {
       ...base,
@@ -70,6 +80,7 @@ const selectStyle: StylesConfig<Option> = {
   },
 };
 
+// add theme color
 const theme = (theme: Theme): Theme => {
   return {
     ...theme,
@@ -85,11 +96,12 @@ const theme = (theme: Theme): Theme => {
  * Custom dropdown indicator
  * @returns
  */
-// const DropdownIndicator = () => (
-//   <Image src="/icons/downArrow.svg" width={24} height={24} alt="Arrow" />
-// );
+const DropdownIndicator = () => {
+  // const { menuIsOpen } = props.selectProps;
+  return <FaChevronDown size={20} className={`p-1 transition-transform `} />;
+};
 
-const Select: React.FC<Props<Option>> = ({
+const Select: React.FC<SelectProps<Option>> = ({
   image,
   height = 40,
   error,
@@ -97,8 +109,8 @@ const Select: React.FC<Props<Option>> = ({
 }) => {
   const Control = ({ children, ...props }: ControlProps<Option>) => (
     <span
-      className={`flex items-center gap-1 border  rounded-sm h-[${height}px] ${
-        error ? "border-error" : "border-primary"
+      className={`flex items-center gap-1 border rounded-sm h-[${height}px] ${
+        error ? "border-error" : ""
       }`}
     >
       {image}
@@ -136,7 +148,7 @@ const Select: React.FC<Props<Option>> = ({
       isClearable
       components={{
         IndicatorSeparator: () => null,
-        // DropdownIndicator,
+        DropdownIndicator,
         Control,
         Option,
         Placeholder,

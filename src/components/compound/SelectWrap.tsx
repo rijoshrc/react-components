@@ -1,6 +1,6 @@
-import Select from "../atoms/Select";
+import Select, { Option } from "../atoms/Select";
 
-const options = [
+const options: Option[] = [
   {
     label: "Option 1",
     value: "option 1",
@@ -18,7 +18,7 @@ const SelectWrap = () => {
         Select
       </label>
       <div className="flex flex-wrap gap-4">
-        <Select options={options} />
+        <Select options={options} error />
         <Select isMulti options={options} />
       </div>
     </div>
