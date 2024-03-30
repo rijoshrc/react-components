@@ -96,9 +96,14 @@ const theme = (theme: Theme): Theme => {
  * Custom dropdown indicator
  * @returns
  */
-const DropdownIndicator = () => {
-  // const { menuIsOpen } = props.selectProps;
-  return <FaChevronDown size={20} className={`p-1 transition-transform `} />;
+const DropdownIndicator = (props: DropdownIndicatorProps<Option>) => {
+  const { menuIsOpen } = props.selectProps;
+  return (
+    <FaChevronDown
+      size={20}
+      className={`p-1 transition-transform ${menuIsOpen && "rotate-180"}`}
+    />
+  );
 };
 
 const Select: React.FC<SelectProps<Option>> = ({
@@ -107,6 +112,7 @@ const Select: React.FC<SelectProps<Option>> = ({
   error,
   ...props
 }) => {
+  // wrapper component
   const Control = ({ children, ...props }: ControlProps<Option>) => (
     <span
       className={`flex items-center gap-1 border rounded-sm h-[${height}px] ${
@@ -118,6 +124,7 @@ const Select: React.FC<SelectProps<Option>> = ({
     </span>
   );
 
+  // option component
   const Option = (props: OptionProps<Option>) => {
     const { innerProps, innerRef } = props;
     return (
@@ -133,6 +140,7 @@ const Select: React.FC<SelectProps<Option>> = ({
     );
   };
 
+  // placeholder component
   const Placeholder = (props: PlaceholderProps<Option>) => {
     return (
       <components.Placeholder {...props}>
