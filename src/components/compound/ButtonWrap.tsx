@@ -1,5 +1,5 @@
 import { RiLinkM } from "react-icons/ri";
-import { Button } from "../atoms/Button";
+import { Button } from "../atoms/button";
 
 const ButtonWrap = () => {
   return (

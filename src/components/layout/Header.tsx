@@ -1,4 +1,4 @@
-import { Button } from "../atoms/Button";
+import { Button } from "../atoms/button";
 import { CiDark, CiLight } from "react-icons/ci";
 import { useTheme } from "../providers/ThemeProvider";
 

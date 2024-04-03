@@ -22,6 +22,8 @@ export default {
         "link-btn": "#000",
         "link-btn-dark": "#fff",
         // end of button
+        accent: "#80D17A",
+        "input-dark": "#fff",
       },
       backgroundColor: {
         primary: "#fff",
@@ -38,12 +40,15 @@ export default {
         "ghost-btn": "rgb(246, 246, 249)",
         "ghost-btn-dark": "rgb(57, 56, 56)",
         // end of button
+        accent: "#80D17A",
+        "input-dark": "#000",
       },
       borderColor: {
         // button
         "outline-btn": "#000",
         "outline-btn-dark": "#fff",
         // end of button
+        accent: "#80D17A",
       },
     },
   },
