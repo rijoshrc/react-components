@@ -1,6 +1,6 @@
-import React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
 import cn from "@/utils/cn";
+import { cva } from "class-variance-authority";
+import React from "react";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
