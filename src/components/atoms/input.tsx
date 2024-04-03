@@ -5,10 +5,20 @@ import React from "react";
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   variant?: "border" | "underline";
+  forwardRef?: React.Ref<HTMLInputElement>;
 }
 
-const Input: React.FC<InputProps> = ({ className, variant, ...props }) => (
-  <input {...props} className={cn(inputVariants({ variant, className }))} />
+const Input: React.FC<InputProps> = ({
+  className,
+  variant,
+  forwardRef,
+  ...props
+}) => (
+  <input
+    ref={forwardRef}
+    {...props}
+    className={cn(inputVariants({ variant, className }))}
+  />
 );
 
 const inputVariants = cva(
