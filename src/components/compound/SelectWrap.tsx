@@ -1,4 +1,4 @@
-import Select, { Option } from "../atoms/Select";
+import { Option, Select } from "../atoms/select";
 
 const options: Option[] = [
   {

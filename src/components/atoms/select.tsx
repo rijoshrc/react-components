@@ -168,4 +168,4 @@ const Select: React.FC<SelectProps<Option>> = ({
   );
 };
 
-export default Select;
+export { Select };
