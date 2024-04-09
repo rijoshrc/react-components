@@ -1,6 +1,7 @@
 import ButtonWrap from "./ButtonWrap";
 import InputWrap from "./InputWrap";
 import SelectWrap from "./SelectWrap";
+import TableWrap from "./TableWrap";
 import TextareaWrap from "./TextareaWrap";
 
 const ElementWrapper = () => {
@@ -10,6 +11,7 @@ const ElementWrapper = () => {
       <SelectWrap />
       <InputWrap />
       <TextareaWrap />
+      <TableWrap />
     </div>
   );
 };
