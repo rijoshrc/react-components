@@ -1,3 +1,4 @@
+import { Input } from "../atoms/input";
 import {
   Table,
   TableBody,
@@ -20,7 +21,12 @@ const TableWrap = () => {
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
+            <TableHead>
+              <div className="flex items-center gap-2">
+                <Input type="checkbox" role="checkbox" className="w-4 h-4" />
+                Invoice
+              </div>
+            </TableHead>
             <TableHead>Status</TableHead>
             <TableHead>Method</TableHead>
             <TableHead className="text-right">Amount</TableHead>
@@ -29,9 +35,10 @@ const TableWrap = () => {
         <TableBody>
           {[1, 2, 3].map((entry) => (
             <TableRow>
-              <TableCell key={entry}>aasda</TableCell>
-              <TableCell>aasda</TableCell>
-              <TableCell>aasda</TableCell>
+              <TableCell key={entry}>test</TableCell>
+              <TableCell>lorem</TableCell>
+              <TableCell>lorem</TableCell>
+              <TableCell className="text-right">100</TableCell>
             </TableRow>
           ))}
         </TableBody>
