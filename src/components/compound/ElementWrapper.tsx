@@ -1,5 +1,6 @@
 import ButtonWrap from "./ButtonWrap";
 import InputWrap from "./InputWrap";
+import ProgressWrap from "./ProgressWrap";
 import SelectWrap from "./SelectWrap";
 import TableWrap from "./TableWrap";
 import TextareaWrap from "./TextareaWrap";
@@ -12,6 +13,7 @@ const ElementWrapper = () => {
       <InputWrap />
       <TextareaWrap />
       <TableWrap />
+      <ProgressWrap />
     </div>
   );
 };
