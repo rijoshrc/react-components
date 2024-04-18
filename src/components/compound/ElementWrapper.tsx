@@ -7,7 +7,7 @@ import TextareaWrap from "./TextareaWrap";
 
 const ElementWrapper = () => {
   return (
-    <div className="w-screen h-screen p-10 space-y-10 bg-primary dark:bg-primary-dark">
+    <div className="w-screen h-screen px-10 pt-20 mt-10 space-y-10 overflow-auto bg-primary dark:bg-primary-dark">
       <ButtonWrap />
       <SelectWrap />
       <InputWrap />

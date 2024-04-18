@@ -5,7 +5,7 @@ import { useTheme } from "../providers/ThemeProvider";
 const Header = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <header className="flex items-center h-20 px-10 bg-secondary dark:bg-secondary-dark">
+    <header className="fixed inset-0 z-50 flex items-center h-20 px-10 bg-secondary dark:bg-secondary-dark">
       <div>
         <h2 className="text-2xl font-bold text-primary dark:text-primary-dark">
           React Components
